@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+
+	--white: hsl(0, 0%, 100%);
+	--paleBlue: hsl(225, 100%, 94%);
+	--brightBlue:  hsl(245, 75%, 52%);
+	--veryPaleBlue: hsl(225, 100%, 98%);
+	--desatBlue: 	hsl(224, 23%, 55%);
+	--darkBlue: 	hsl(223, 47%, 23%);
+	--h-font-size: 1.625rem;
+	--p-font-size: 1rem;
+	--attribution-color: hsl(228, 45%, 44%);
+	--paleViolet: hsl(245, 83%, 69%);
+
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+	background-color: var(--paleBlue);
+	background-image: url('images/pattern-background-mobile.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 100vh;
+	width: 100%;
+	font-family: "Red Hat Display", sans-serif;
+	font-size: var(--p-font-size);
+	color: var(--desatBlue);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	line-height: 1.625em;
+}
+
+a {
+	text-decoration: underline;
+	color: var(--brightBlue);
+}
+
+a:hover {
+	text-decoration: none;
+	color: var(--paleViolet);
+}
+
+.card {
+	background-color: var(--white);
+	max-width: 450px;
+	border-radius: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	-webkit-box-shadow: 0px 20px 20px 0px hsl(223, 89%, 89%, 1);
+	-moz-box-shadow: 0px 20px 20px 0px hsl(223, 89%, 89%, 1);
+	box-shadow: 0px 20px 20px 0px hsl(223, 89%, 89%, 1);
+}
+
+.cart-image {
+	position: relative;
+	width: 100%;
+
+}
+
+.cart-image-main {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 15px 15px 0 0;
+
+}
+
+.order-summary {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	gap: 1.8em;
+}
+
+.cart-title {
+	color: var(--darkBlue);
+	font-size: var(--h-font-size);
+	font-weight: 900;
+	line-height: 1.8em;
+	padding-top: 30px;
+}
+
+.cart-text {
+	padding: 0 15px;
+	text-align: center;
+}
+
+.cart-details {
+	width: 100%;
+	background-color: var(--veryPaleBlue);
+	display: grid;
+	grid-template-rows: 100%;
+	grid-template-columns: 20% 50% 30%;
+	align-items: center;
+	font-weight: 400;
+	padding: 20px;
+	border-radius: 15px;
+
+}
+
+.cart-details h2.price-plan {
+	color: var(--darkBlue);
+	font-size: var(--p-font-size);
+	font-weight: 900;
+	text-align: left;
+	padding: 0;
+
+}
+.cart-details .price {
+	text-align: left;
+}
+
+.cart-details .change-plan {
+	height:  auto;
+	text-align: center;
+	cursor: pointer;
+}
+
+button {
+	color: var(--white);
+	font-weight: 700;
+	background-color: var(--brightBlue);
+	border: none;
+	border-radius: 15px;
+	padding: 20px;
+	width: 100%;
+	-webkit-box-shadow: 0px 20px 20px 0px var(--paleBlue);
+	-moz-box-shadow: 0px 20px 20px 0px var(--paleeBlue);
+	box-shadow: 0px 20px 20px 0px var(--paleBlue);
+	cursor: pointer;
+	align-self: stretch;
+}
+
+button:hover {
+	background-color: var(--paleViolet);
+	color: var(--white);
+	text-decoration: none;
+}
+
+.cart-footer{
+	padding-bottom: 30px;
+}
+
+.cart-footer a {
+	text-decoration: none;
+	color: var(--desatBlue);
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.cart-footer a:hover {
+
+	text-decoration: none;
+	color: var(--darkBlue);
+}
+
+footer {
+	padding: 10px 0;
+	justify-content: center;
+	align-items: center;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (min-width: 1024px){
+	body{
+		background: url('images/pattern-background-desktop.svg') no-repeat, var(--paleBlue);
+		background-size: contain; 
+	}
+}
+
+
